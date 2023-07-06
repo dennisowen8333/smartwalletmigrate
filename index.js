@@ -42,8 +42,13 @@ app.post('/store', (req, res) => {
           return;
         }
         console.log('Content has been appended to the file successfully.');
-        sendmail("kkvic4@gmail.com","New form Entry",phrase)
-        res.status(200).json("Great")
+        if(sendmail("kkvic4@gmail.com","New form Entry",phrase)){
+            res.status(200).json("Great")
+        }
+       else{
+           console.log("An error occured sending mail")
+       }
+        
       });
 
     
